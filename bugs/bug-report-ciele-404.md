@@ -22,8 +22,8 @@ Ao acessar o domínio principal, o servidor retorna uma página de erro 404 (NOT
 - **Resultado Esperado:** O site deve carregar a página inicial com sucesso (Status 200)
 
 ## Evidências
-![Evidência de Rede - Status 404](../Captura%20de%20Tela%202026-05-05%20às%2018.07.30.png)
-![Evidência de Console - Erro de Recurso](../Captura%20de%20Tela%202026-05-05%20às%2018.08.09.png)
+![Evidência de Rede - Status 404](./Captura%20de%20Tela%202026-05-05%20às%2018.07.30.png)
+![Evidência de Console - Erro de Recurso](./Captura%20de%20Tela%202026-05-05%20às%2018.08.09.png)
 
 - ## Notas Técnicas
 - O erro foi reproduzido em múltiplos navegadores, confirmando falha no recurso hospedado em `connectbroker.com.br`.
