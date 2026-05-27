@@ -35,3 +35,22 @@ Este documento contém os cenários de teste para a funcionalidade de cadastro d
 - **Navegadores:** Google Chrome e Safari.
 - **Documentação:** Markdown.
 - **Versionamento:** Git e GitHub via VS Code.
+
+---
+
+3. ## [Automação de Testes End-to-End (E2E) - Primeiros Passos Cypress](./cypress/)
+   - Foco: Automação de fluxos críticos de usuário e validação de interface (UI).
+
+Este projeto marca o início dos meus estudos em automação, focando na escrita de scripts de testes funcionais robustos e rápidos.
+
+## 🔍 Cenários Automatizados
+
+- **Login - Success:** Validação de fluxo feliz, garantindo que usuários com credenciais válidas acessem o sistema com sucesso.
+- **Login - Fail:** Validação das mensagens de erro e comportamento do sistema ao tentar logar com dados inválidos ou campos vazios.
+
+## 🛠️ Ferramentas Utilizadas neste Estudo
+
+- **Framework de Automação:** Cypress (JavaScript).
+- **Ambiente de Execução:** Node.js.
+- **IDE:** Visual Studio Code.
+- **Versionamento:** Git e GitHub.
