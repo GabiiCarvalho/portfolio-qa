@@ -54,3 +54,36 @@ Este projeto marca o início dos meus estudos em automação, focando na escrita
 - **Ambiente de Execução:** Node.js.
 - **IDE:** Visual Studio Code.
 - **Versionamento:** Git e GitHub.
+
+---
+
+4. ## [Planejamento de Testes e Gerenciamento de Defeitos - Swagger PetStore](./petstore/)
+   - Foco: Técnicas de Caixa-Preta, Validação de Regras de Negócio e Engenharia de Defeitos.
+
+Projeto focado no planejamento estratégico de testes e mapeamento de falhas em um ecossistema de e-commerce (PetStore), simulando cenários reais de integração entre gerenciamento de usuários, catálogo de produtos e regras de negócio do carrinho de compras.
+
+## 🎯 Escopo dos Testes (Test Cases)
+
+A suíte de testes foi desenhada aplicando conceitos de **Partição de Equivalência** e **Análise de Valor Limite** para garantir a cobertura dos seguintes fluxos críticos:
+
+- **Gestão de Usuários:** Validação de restrições de campos (User ID, e-mail e regras de senha), fluxos de cadastro e persistência de dados de autenticação (Login/Logout).
+- **Catálogo de Produtos:** Comportamento e relevância da barra de busca por palavras-chave e integridade dos dados exibidos.
+- **Ciclo de Compra:** Validação de regras de negócio do carrinho de compras (adição, remoção e cálculo automatizado de subtotal/total com base na alteração de quantidades).
+
+👉 **[Suíte Completa com os 14 Casos de Teste detalhados](./petstore/casos-de-teste.md)**
+
+## 🐛 Engenharia de Defeitos (Bug Reports)
+
+Identificação, triagem e documentação de falhas na aplicação baseando-se nas inconsistências encontradas frente aos requisitos esperados. Os reports foram estruturados utilizando o padrão de mercado **WWW (What, Where, When)**, contendo:
+
+- **Severidade e Prioridade:** Classificação do impacto técnico do bug no sistema versus a urgência de correção para o negócio.
+- **Passos para Reprodução:** Descrição exata, sequencial e reprodutível do comportamento inesperado.
+- **Resultados:** Contraste claro entre o _Resultado Esperado_ (Regra de Negócio) e o _Resultado Obtido_ (Falha presenciada).
+
+👉 **[Registro Detalhado dos Bug Reports Mapeados](./petstore/bug-reports.md)**
+
+## 🛠️ Ferramentas e Conceitos Aplicados
+
+- **Design de Testes:** Testes Funcionais, Testes de Regressão, Testes de Caixa-Preta.
+- **Documentação:** Markdown estruturado para engenharia de QA.
+- **Versionamento:** Git e GitHub.
