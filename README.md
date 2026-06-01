@@ -87,3 +87,58 @@ Identificação, triagem e documentação de falhas na aplicação baseando-se n
 - **Design de Testes:** Testes Funcionais, Testes de Regressão, Testes de Caixa-Preta.
 - **Documentação:** Markdown estruturado para engenharia de QA.
 - **Versionamento:** Git e GitHub.
+
+# 🎭 Especificação por Comportamento (BDD) e Casos de Teste
+
+**História de Usuário (User Story):**
+
+- **Como:** Visitante sem conta
+- **Quero:** Criar um cadastro na plataforma
+- **Para:** Ter acesso ao sistema
+
+---
+
+## 📑 Cenários em Formato Gherkin (BDD)
+
+**Cenário: Cadastro realizado com sucesso (Happy Path)**
+
+- **Dado** que estou na tela de cadastro do sistema
+- **Quando** eu preencher todos os campos obrigatórios (Nome, e-mail, senha e confirmação de senha) com dados válidos
+- **E** clicar no botão [Cadastrar]
+- **Então** o sistema deve criar a conta com sucesso
+- **E** exibir uma mensagem de confirmação
+- **E** me redirecionar para a tela inicial já autenticado
+
+**Cenário: Cadastro com e-mail já existente**
+
+- **Dado** que estou na tela de cadastro do sistema
+- **Quando** eu preencher os dados utilizando um e-mail que já está cadastrado na base de dados
+- **E** clicar no botão [Cadastrar]
+- **Então** o sistema deve exibir a mensagem de erro: _“Este e-mail já está em uso“_
+- **E** o novo cadastro não deve ser processado
+
+---
+
+## 📋 Casos de Teste Tradicionais (Test Cases)
+
+### **PS-TC-015: Cadastro de usuário com dados válidos**
+
+- **Pré-condição:** Acessar a URL da página de cadastro.
+- **Passos para Execução:**
+  1. Preencher o campo de Nome com um valor válido.
+  2. Inserir um endereço de e-mail válido e inédito.
+  3. Digitar uma senha que atenda aos critérios de segurança.
+  4. Confirmar a senha digitada no campo correspondente.
+  5. Clicar no botão [Cadastrar].
+- **Resultado Esperado:** Usuário é registrado na plataforma com sucesso e redirecionado para a tela inicial logado.
+
+### **PS-TC-016: Tentativa de cadastro com formato de e-mail inválido**
+
+- **Pré-condição:** Acessar a URL da página de cadastro.
+- **Passos para Execução:**
+  1. Preencher o campo de Nome com um valor válido.
+  2. Inserir um endereço de e-mail fora do padrão (Ex: `gabi.gmail.com` ou `gabi@.com`).
+  3. Digitar uma senha válida.
+  4. Confirmar a senha.
+  5. Clicar no botão [Cadastrar].
+- **Resultado Esperado:** O sistema impede o envio do formulário e exibe a mensagem de validação de campo: _“Formato de e-mail inválido“_.
