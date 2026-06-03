@@ -15,6 +15,9 @@ describe("Orange HRM Tests", () => {
     calendaryField: ".oxd-date-wrapper",
     saveBtn: "[type='submit']",
     dateCloseButton: ".--close",
+    selectionBox: ".oxd-select-text",
+    countryBox: "[role='option']",
+    matrialStatusBox: "[role='option']",
   };
 
   it.only("User Info Update - Success", () => {
@@ -28,14 +31,17 @@ describe("Orange HRM Tests", () => {
     cy.get(selectorsList.firstNameField).clear().type("Nathan");
     cy.get(selectorsList.middleNameField).clear().type("Silva");
     cy.get(selectorsList.lastNameField).clear().type("Carvalho");
-    cy.get(selectorsList.genericField).eq(3).clear().type("junior"); //employee id
-    cy.get(selectorsList.genericField).eq(4).clear().type("332213"); // other id
-    cy.get(selectorsList.genericField).eq(5).clear().type("64135"); // driver license
+    cy.get(selectorsList.genericField).eq(3).clear().type("nathancarvalho"); //employee id
+    cy.get(selectorsList.genericField).eq(4).clear().type("332213"); // employee id
+    cy.get(selectorsList.genericField).eq(5).clear().type("64135"); // other id
     cy.get(selectorsList.calendaryField).eq(0).clear().type("2026-06-28"); //calendario license date
     cy.get(selectorsList.dateCloseButton).click(); //close calendar
     cy.get(selectorsList.calendaryField).eq(1).clear().type("1997-11-28"); //calendario birth date
     cy.get(selectorsList.dateCloseButton).click(); //close calendar
-    cy.get(selectorsList.genericField).eq(8).clear().type("7469"); //Test_Field
+    cy.get(selectorsList.selectionBox).eq(0).click();
+    cy.get(selectorsList.countryBox).eq(27).click();
+    cy.get(selectorsList.selectionBox).eq(1).click();
+    cy.get(selectorsList.matrialStatusBox).eq(2).click();
     cy.get(selectorsList.saveBtn).eq(0).click(); // Save button
     cy.get("body").should("contain", "Successfully Updated");
   });
